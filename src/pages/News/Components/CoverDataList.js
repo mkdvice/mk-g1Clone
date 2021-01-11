@@ -33,10 +33,9 @@ export const CoverDataList = [
         newsTitle:"",
         newsIntro:"",
         newsText: "",
-        newsImg:"",
+        newsImg:"/img/prive.jpg",
         timePost:"",
         newsPath:"/"
-
     },
 
 ]

@@ -7,52 +7,87 @@ const MainNews = props => {
 
     return (
         <>
-            <div className="d-flex row justify-content-md-between justify-content-sm-center">
-                {/* Manchete */}
-                {isMainNews ? <div className="col-sm-12 col-md-6 card">
-                    <a className="text-decoration-none" href={props.newsPath}>
-                        <div className="container">
-                            <p className="text-muted mt-2">{props.newsTag}</p>
-                            <div className="align-self-center">
-                                <h1 className="text-primary">{props.newsTitle}</h1>
+            <div className="d-flex row">
+
+                <div className="col-sm-12 col-md-6 card">
+
+                    <div className="conatiner mt-2 mb-2">
+
+                        <div>
+                            <p className="text-muted h5 ">{props.newsTag}</p>
+                        </div>
+
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                        <a className="text-decoration-none" href={props.newsPath}>
+
+                            {isMainNews ? <div className="">
+                                <h2 className="text-primary mb-4">{props.newsTitle}</h2>
                                 <p className="text-muted">{props.newsIntro}</p>
-                            </div>
-                        </div>
-                    </a>
-                </div> : ''}
+                            </div> : ''}
 
-                <div className="mt-2 d-md-none" />
+                        </a>
 
-                {/* Outras noticias */}
-                <div className="d-flex row col-sm-12 col-md-6">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
 
-                    {isSecondNews ? <a href={props.newsPath} className="text-decoration-none">
-                        <div className="col-sm-12">
-                            <div className="card">
-                                <img src={props.newsImg} className="card-img" alt={props.altImg} />
-                                <div className="card-img-overlay d-flex row text-light">
-                                    <h5 className="card-title">{props.newsTag}</h5>
-                                    <h1 className="h2">{props.newsTitle}</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </a> : ''}
-
-                    <div className="mt-2" />
-
-                    {isThirdNews ? <a href={props.newsPath} className="text-decoration-none">
-                        <div className="col-sm-12">
-                            <div className="card">
-                                <img src={props.newsImg} className="card-img" alt={props.altImg} />
-                                <div className="card-img-overlay d-flex row text-light">
-                                    <h5 className="card-title">{props.newsTag}</h5>
-                                    <h1 className="h2">{props.newsTitle}</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </a> : ''}
+                    </div>
 
                 </div>
+
+                <div className="d-md-none mt-3" />
+
+                <div className="col-sm-12 col-md-6">
+
+                    <div className="d-flex row">
+
+                        <div className="col-12">
+
+                            {isSecondNews ? <a href={props.newsPath}>
+                                <div className="card bg-dark text-white">
+                                    <img src={props.newsImg} className="card-img" alt="..." />
+                                    <div className="card-img-overlay">
+                                        <h5 className="card-title">{props.newsTitle}</h5>
+                                    </div>
+                                </div>
+                            </a> : ''}
+
+
+                        </div>
+
+                        <div className="mt-3" />
+
+                        <div className="col-12">
+
+                            {isThirdNews ? <a href={props.newsPath}>
+                            <div className="card bg-dark text-white">
+                                <img src={props.newsImg}
+                                className="card-img" alt="..." />
+                                <div className="card-img-overlay">
+                                    <h5 className="card-title">{props.newsTitle}</h5>
+                                </div>
+                            </div>
+                            </a> : ''}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </>
     )

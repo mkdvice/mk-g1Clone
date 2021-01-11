@@ -2,18 +2,32 @@ import React from 'react'
 import MainNews from './Components/MainNews'
 import RegularNews from './Components/RegularNews'
 import { NewsDataList } from './Components/NewsDataList'
-import {CoverDataList} from './Components/CoverDataList'
+import NewsPage from './Components/NewsPage'
 
 const News = () => {
     return (
         <div className="container">
-            {CoverDataList.map((item, index) => {
+        
+        {NewsDataList.map((item, index) => {
+            return (
+                <NewsPage key={index}
+            title={item.title}
+            date={item.date}
+            sourceUrl={item.sourceUrl}
+            alt={item.alt}
+            content={item.content}
+
+        />
+            )
+        })}
+
+            {/* {CoverDataList.map((item, index) => {
                 return (
                     <MainNews  key={index}
                         isMainNews={item.isMainNews}
                         isSecondNews={item.isSecondNews}
                         isThirdNews={item.isThirdNews}
-                        newsImg={item.imgNews}
+                        newsImg={item.newsImg}
                         newsTag={item.newsTag}
                         newsTitle={item.newsTitle}
                         newsIntro={item.newsIntro}
@@ -23,9 +37,9 @@ const News = () => {
 
                     />
                 )
-            })}
+            })} */}
 
-            {NewsDataList.map((item, index) => {
+            {/* {NewsDataList.map((item, index) => {
                 return (
                     <RegularNews key={index}
                         newsImg={item.imgNews}
@@ -37,7 +51,7 @@ const News = () => {
                         isSponsored={item.isSponsored}
                     />
                 )
-            })}
+            })} */}
         </div>
     )
 }
