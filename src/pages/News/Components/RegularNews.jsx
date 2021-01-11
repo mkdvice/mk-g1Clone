@@ -1,7 +1,9 @@
 import React from 'react'
 
 const RegularNews = props => {
+
     const isSponsored = props.isSponsored
+
     return (
         <>
             <div className="mt-3 card">
@@ -25,7 +27,7 @@ const RegularNews = props => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> 
         </>
     )
 }
